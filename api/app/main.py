@@ -69,5 +69,10 @@ def clf_text(data: TextInput):
 
 
 
-##### run from api folder:
-##### uvicorn app.main:app (--reload to check service after every saving)
+##### 
+# run from api folder:
+# uvicorn app.main:app (--reload to check service after every saving)
+# 
+# check via cURL util:
+# curl -X POST "http://127.0.0.1:8000/classify/" -L -H  "Content-Type: multipart/form-data" -F "file=@dog.jpeg;type=image/jpeg"
+####

@@ -12,4 +12,4 @@ EXPOSE 8501
 
 ENTRYPOINT ["streamlit", "run"]
 
-CMD ["main.py"]
+CMD ["main.py", "--server.port=8503"]

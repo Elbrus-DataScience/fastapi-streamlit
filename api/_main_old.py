@@ -57,7 +57,7 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get('/')
 def return_info():
-    return 'Hello!'
+    return 'Hello FastAPI!'
 
 
 @app.post('/clf_image')
@@ -82,7 +82,7 @@ def classify_image(file: UploadFile):
 
 @app.post('/clf_table')
 def predict(x: TableInput):
-    logger.warning(np.array([x.feature1, x.feature2]).reshape(1, 2).shape)
+    # logger.warning(np.array([x.feature1, x.feature2]).reshape(1, 2).shape)
     prediction = sk_model.predict(np.array([x.feature1, x.feature2]).reshape(1, 2))
     result = TableOutput(prediction=prediction[0])
     return result

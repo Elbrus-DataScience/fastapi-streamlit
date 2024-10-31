@@ -124,6 +124,7 @@ def clf_text(data: TextInput):
 
 if __name__ == "__main__":
     # Запуск приложения на localhost с использованием Uvicorn
+    # производится из командной строки: python your/path/api/main.py
     uvicorn.run("main:app", host='127.0.0.1', port=8000, reload=True)
 
 ##### 
